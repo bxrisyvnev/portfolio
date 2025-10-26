@@ -7,53 +7,253 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <!-- Single background layer -->
     <div class="background"></div>
 
     <header>
-      <h1 class="logo">Boris Yanev</h1>
+      <div class="logo">Media Creation Portfolio</div>
       <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://gitlab.com" target="_blank">GitLab</a>
+        <a href="#home" data-route="home" class="active">Home</a>
+        <a href="#projects" data-route="projects">Projects</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener"
+          >LinkedIn</a
+        >
+        <a href="https://gitlab.com" target="_blank" rel="noopener">GitLab</a>
       </nav>
     </header>
 
-    <section id="hero">
-      <div class="hero-content">
-        <h2>Hi, I'm <span class="accent">Boris Yanev</span></h2>
-        <p>Software Developer • Builder • Problem Solver</p>
-      </div>
-    </section>
+    <main id="app">
+      <section data-page="home" class="active">
+        <section id="hero">
+          <h2>Hi, I'm <span class="accent">Boris</span></h2>
+          <p>Software Developer • Builder • Problem Solver</p>
+        </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non
-        libero at urna placerat porta. Fusce euismod, libero id vulputate
-        feugiat, ipsum mauris ultrices mi, vitae posuere ligula lorem et ligula.
-      </p>
-    </section>
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            I'm a software developer studing in Media Creatinon semester that
+            practices mostly Busness because I'm the scrum master of the team
+            PatchWork. I also stduy infracstructure for fun. I even have a
+            server in my room where I host a cloud and gitlab runners inside
+            docker containers. I'm basically doing everything. My main goal is
+            to be a 10x developer so it's expected of me to put more effort into
+            studing everything ICT related.
+          </p>
+        </section>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project">
-          <h3>Task Manager App</h3>
-          <p>A simple task manager built to improve productivity.</p>
-        </div>
-        <div class="project">
-          <h3>Weather Dashboard</h3>
-          <p>Displays weather data beautifully using modern APIs.</p>
-        </div>
-        <div class="project">
-          <h3>Portfolio Generator</h3>
-          <p>Instant portfolio generator for developers.</p>
-        </div>
-      </div>
-    </section>
+      <section data-page="projects">
+        <section id="projects">
+          <div class="projects-wrap">
+            <input type="radio" name="proj" id="proj1" checked />
+            <input type="radio" name="proj" id="proj2" />
+            <input type="radio" name="proj" id="proj3" />
+            <input type="radio" name="proj" id="proj4" />
+            <input type="radio" name="proj" id="proj5" />
+            <input type="radio" name="proj" id="proj6" />
 
-    <footer>&copy; 2025 Your Name. All rights reserved.</footer>
+            <aside class="file-tree">
+              <div class="tree-title">/projects/..</div>
+              <label for="proj1" class="file">poster.dpf</label>
+              <label for="proj2" class="file"
+                >patchwork website wireframe.pdf</label
+              >
+              <label for="proj3" class="file"
+                >patchwork gitlab repository.pdf</label
+              >
+              <label for="proj4" class="file"
+                >patchwork logo whiteboard.pdg</label
+              >
+              <label for="proj5" class="file">patchwork logo fonts.pdf</label>
+              <label for="proj6" class="file">typst.pdf</label>
+            </aside>
+
+            <div class="viewer">
+              <div id="p1" class="project-pane">
+                <h3>Poster</h3>
+                <p>Poster prototype for Patchwork brand. It is made in Gimp.</p>
+                <center>
+                  <img src="images/posterBoris.png" width="90%" height="90%" />
+                </center>
+              </div>
+
+              <div id="p2" class="project-pane">
+                <h3>Patchwork Website Wireframe</h3>
+                <p>
+                  Wireframe of a website for Patchwork. It is made using figma.
+                  There is a lot of prototyping done and learned.
+                </p>
+                <center>
+                  <img
+                    src="images/webpageDesign.png"
+                    width="90%"
+                    height="90%"
+                  />
+                </center>
+              </div>
+
+              <div id="p3" class="project-pane">
+                <h3>Patchwork GitLab Repository</h3>
+                <p>
+                  GitLab repository for Patchwork. It's designed with 2 branch
+                  strategy, one main branch and one side branch. It has a rule
+                  that forbids anyone from pushing in the main branch. The main
+                  branch is only for merging at the end of each sprint. The
+                  pushing happens only in the side branch. This is done to
+                  ensure that there is one stable branch. <br />
+                  <a href="https://git.fhict.nl/I503706/s3mc-patchwork"
+                    >Link for repository</a
+                  >
+                </p>
+                <img
+                  src="images/gitLabHomePage.png"
+                  width="100%"
+                  height="100%"
+                />
+                <br />
+                <br />
+                <img
+                  src="images/gitLabPrototypesFiles.png"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+
+              <div id="p4" class="project-pane">
+                <h3>Patchwork Logo Whiteboard</h3>
+                <p>
+                  GitLab repository for Patchwork. It's designed with 2 branch
+                  strategy, one main branch and one side branch. It has a rule
+                  that forbids anyone from pushing in the main branch. The main
+                  branch is only for merging at the end of each sprint. The
+                  pushing happens only in the side branch. This is done to
+                  ensure that there is one stable branch.
+                </p>
+                <img
+                  src="images/gitLabHomePage.png"
+                  width="100%"
+                  height="100%"
+                />
+                <br />
+                <br />
+                <img
+                  src="images/gitLabPrototypesFiles.png"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>&copy; 2025 Portfolio. All rights reserved. (Not really)</footer>
+
+    <script>
+      (function () {
+        const routes = Array.from(
+          document.querySelectorAll("section[data-page]"),
+        );
+        const links = Array.from(
+          document.querySelectorAll("nav a[data-route]"),
+        );
+
+        const projectsWrap = document.querySelector(".projects-wrap");
+        const radios = projectsWrap
+          ? Array.from(
+              projectsWrap.querySelectorAll('input[type="radio"][name="proj"]'),
+            )
+          : [];
+
+        // --- Create slug map dynamically from label text ---
+        const slugMap = {};
+        radios.forEach((radio) => {
+          const label = projectsWrap.querySelector(`label[for="${radio.id}"]`);
+          if (!label) return;
+          // turn "📄 task-manager.md" into "task-manager"
+          const text = label.textContent
+            .replace(/📄|\.[^ ]+|\s+/g, "")
+            .toLowerCase();
+          slugMap[text] = radio.id;
+        });
+
+        function parseHash() {
+          const hash = location.hash || "#home";
+          const [routeRaw, q] = hash.replace(/^#/, "").split("?");
+          const route = routeRaw || "home";
+          const params = new URLSearchParams(q || "");
+          return { route, params };
+        }
+
+        function showRoute(route) {
+          routes.forEach((s) =>
+            s.classList.toggle("active", s.dataset.page === route),
+          );
+          links.forEach((a) =>
+            a.classList.toggle("active", a.dataset.route === route),
+          );
+        }
+
+        function selectProjectFromParams(params) {
+          const slug = params.get("file");
+          if (!slug) return;
+          const id = slugMap[slug];
+          const radio = id ? document.getElementById(id) : null;
+          if (radio) radio.checked = true;
+        }
+
+        function currentProjectSlug() {
+          const checked = radios.find((r) => r.checked);
+          if (!checked) return null;
+          const entry = Object.entries(slugMap).find(
+            ([, id]) => id === checked.id,
+          );
+          return entry ? entry[0] : null;
+        }
+
+        function setHash(route, paramsObj = {}) {
+          const params = new URLSearchParams(paramsObj);
+          const qs = params.toString();
+          const newHash = "#" + route + (qs ? "?" + qs : "");
+          if (location.hash !== newHash) {
+            history.replaceState(null, "", newHash);
+          }
+        }
+
+        // --- Nav clicks (Home / Projects)
+        links.forEach((a) => {
+          a.addEventListener("click", (e) => {
+            e.preventDefault();
+            const route = a.dataset.route;
+            if (route === "projects") {
+              const slug = currentProjectSlug();
+              setHash("projects", slug ? { file: slug } : {});
+            } else {
+              setHash("home");
+            }
+            handleHash();
+          });
+        });
+
+        // --- Project file clicks (update URL)
+        radios.forEach((radio) => {
+          radio.addEventListener("change", () => {
+            const slug = currentProjectSlug();
+            if (slug) setHash("projects", { file: slug });
+          });
+        });
+
+        // --- Hash handling
+        function handleHash() {
+          const { route, params } = parseHash();
+          showRoute(route);
+          if (route === "projects") selectProjectFromParams(params);
+        }
+
+        window.addEventListener("hashchange", handleHash);
+        handleHash();
+      })();
+    </script>
   </body>
 </html>

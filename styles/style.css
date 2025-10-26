@@ -15,20 +15,37 @@ body {
   position: relative;
 }
 
-/* === Single continuous background === */
+/*Single continuous background with transparent image underneath*/
 .background {
   position: fixed;
   top: 0;
   left: 0;
   width: 200%;
   height: 200%;
+  z-index: -1;
+  pointer-events: none; /* so it never blocks clicks */
+}
+
+/*Background image layer*/
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("images/background.jpg") center/cover no-repeat; /* <-- adjust path if needed */
+  opacity: 0.3;
+}
+
+/*Cyan wave layer*/
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background:
     radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.2), transparent 40%),
     radial-gradient(circle at 70% 70%, rgba(0, 255, 255, 0.2), transparent 40%);
   background-size: 200% 200%;
   animation: floatBackground 14s infinite alternate ease-in-out;
-  z-index: -1;
-  filter: blur(100px);
+  filter: blur(100px); /* blur only the wave, not the image */
 }
 
 @keyframes floatBackground {
@@ -49,7 +66,7 @@ body {
   }
 }
 
-/* Header */
+/*Header*/
 header {
   position: fixed;
   width: 100%;
@@ -89,11 +106,31 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Sections - transparent over the background */
+/*highlight active route*/
+nav a.active {
+  color: cyan;
+}
+
+/*Sections - transparent over the background*/
 section {
   padding: 8rem 10%;
   text-align: center;
   position: relative;
+}
+
+/*SPA route visibility*/
+section[data-page] {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.35s,
+    transform 0.35s;
+}
+section[data-page].active {
+  display: block;
+  opacity: 1;
+  transform: none;
 }
 
 #hero {
@@ -118,7 +155,7 @@ section {
   opacity: 0.85;
 }
 
-/* About */
+/*About*/
 #about h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
@@ -131,43 +168,121 @@ section {
   opacity: 0.9;
 }
 
-/* Projects */
+/*Projects*/
 #projects h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
+  font-size: 4rem;
+  margin-bottom: 11rem;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/*Two-column projects layout (file tree + viewer)*/
+.projects-wrap {
+  display: flex;
+  align-items: flex-start;
   gap: 2rem;
+  justify-content: center;
 }
 
-.project {
-  background: rgba(0, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 20px;
+/*Hidden radios*/
+.projects-wrap > input[type="radio"] {
+  display: none;
+}
+
+/*File tree (left)*/
+.file-tree {
+  width: 260px;
+  background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(0, 255, 255, 0.2);
-  transition:
-    transform 0.4s,
-    box-shadow 0.4s;
+  border-radius: 12px;
+  padding: 1rem;
+  flex-shrink: 0;
+  text-align: left;
 }
 
-.project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-}
-
-.project h3 {
+.tree-title {
   color: cyan;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+/*File labels (clickable)*/
+.file {
+  display: block;
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #e0ffff;
+  transition: background 0.25s;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+}
+.file:hover {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+/*Active file highlight*/
+#proj1:checked ~ .file-tree label[for="proj1"],
+#proj2:checked ~ .file-tree label[for="proj2"],
+#proj3:checked ~ .file-tree label[for="proj3"],
+#proj4:checked ~ .file-tree label[for="proj4"] {
+  background: rgba(0, 255, 255, 0.15);
+  color: cyan;
+  font-weight: 600;
+}
+
+/*Viewer (right)*/
+.viewer {
+  flex: 1;
+  min-height: 340px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.project-pane {
+  display: none;
+  animation: fadeIn 0.35s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*Show selected pane based on which radio is checked*/
+#proj1:checked ~ .viewer #p1,
+#proj2:checked ~ .viewer #p2,
+#proj3:checked ~ .viewer #p3,
+#proj4:checked ~ .viewer #p4 {
+  display: block;
+}
+
+.project-pane h3 {
+  color: cyan;
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+}
+.project-pane p {
+  opacity: 0.9;
   margin-bottom: 1rem;
 }
-
-.project p {
+.project-pane ul {
+  padding-left: 1.1rem;
+  list-style: square;
   opacity: 0.85;
 }
 
-/* Footer */
+/*Footer*/
 footer {
   text-align: center;
   padding: 2rem;
@@ -176,7 +291,7 @@ footer {
   border-top: 1px solid rgba(0, 255, 255, 0.2);
 }
 
-/* Responsive */
+/*Responsive*/
 @media (max-width: 768px) {
   #hero h2 {
     font-size: 2.2rem;
@@ -185,4 +300,26 @@ footer {
   #projects h2 {
     font-size: 2rem;
   }
+}
+
+@media (max-width: 900px) {
+  .projects-wrap {
+    flex-direction: column;
+  }
+  .file-tree {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .file {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}
+
+a {
+  color: cyan;
+  background-color: transparent;
+  text-decoration: none;
 }
