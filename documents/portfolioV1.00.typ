@@ -7,7 +7,7 @@
 = LO. 1 Conceptualize, design, and develop professional media products.
 First thing I made was a poster design made using Gimp. The design doesn't look good but it's my first thing made that is media related. Bellow is a link to my porfolio page. \
 #link("https://bxrisyvnev.github.io/portfolio/#projects?file=poster")
-#image("images/posterBoris.png")
+#image("images/posterBoris.png", height: 15cm)
 \
 Here is a wireframe of a webpage I made. The idea was that me, Dylan and Constanti would make wireframes for a webpage and this is what I came up with. \
 #link("https://bxrisyvnev.github.io/portfolio/#projects?file=patchworkwebsitewireframe")
@@ -15,7 +15,17 @@ Here is a wireframe of a webpage I made. The idea was that me, Dylan and Constan
 Here is link to the figma for the full experience \ 
 #link("https://www.figma.com/design/HEged8XFPmD4OGwEx0RhZz/Patchwork-Website-design?node-id=37-30&p=f&t=XcbNy7azdgt12WhR-0") \
 \
-It's designed in figma and there are a lot of prototyping done. The bottom has the main feature which is the group photo. The group photo will be the five members of the group next to each other and when you hover with the mouse on top of one the image will move left and/or right and make space for another bigger picture of the hovered member to pop up with description of that member including contact information.
+It's designed in figma and there are a lot of prototyping done. The bottom has the main feature which is the group photo. The group photo will be the five members of the group next to each other and when you hover with the mouse on top of one the image will move left and/or right and make space for another bigger picture of the hovered member to pop up with description of that member including contact information. \
+\
+In Concept & Inspiration workshop I did the assigment. It was to follow this: \
+\
+Inspiration search > Key concepts > Sketch it out > Apply basic design principles. \
+\
+The entire thing has to be a rough sketch that links: inspiration > concept > design.\
+And what I did is the following bellow.\
+#image("images/moodboard.png")
+#image("images/sketch.png", height: 15cm)
+The inspiration was the everyday life in the east-european countries. And the key words were "Everyday life" and I tried my best to sketch something that represented that. In life a person that is shown to smoke with their hands in the pokets is usually a person that is just taking a walk. No reason at all. Just walk to clear their head. It's something everyone does almost everyday and showing exactly those things (the cigarette and the hands in poket) helped the audience to guess my keywords. The moodboard showed everyday activy places like: gym, panel block, boxing gym, more panel blocks and a factory.
 = LO. 2 Transferable production.
 In our studio im in charge of the repository. I made a GitLab repository which by default has version control. I always use at least two branch strategy so all the times there is a back up of all the work done. After every work day I take all the created media and push it inside a side branch and after each week I merge. Inside the repository there is documents, prototypes and archive folders. Documents are for documents, prototypes are for prototypes and archive is to keep stuff that are no longer relevant to the project (stuff that are no longer worked on) to keep the working folders clean and organised. \
 #link("https://bxrisyvnev.github.io/portfolio/#projects?file=patchworkgitlabrepository")
@@ -31,7 +41,7 @@ The logo came from the name and because of that there are a lot of patches. \
 \
 Bellow is a version of the logo i designed on the whiteboard wita a marker. It was just a idea mainly focused on having the rectangle on the middle empty. \
 #link("https://bxrisyvnev.github.io/portfolio/#projects?file=patchworklogowhiteboard")
-#image("images/logoOnBoard.png")
+#image("images/logoOnBoard.png", height: 15cm)
 The idea wasn't ok since there was too much empty space. \
 \
 Below the top right corner of the image has the logo that Hanna designed but it had the issue that the font wasn't good enough. Our group's tone is that we are professional but can still be fun. Since the colors are already fun I designed the left two logos with more professional font (FreeSerif Regular). The top one is with regular text typing and the bottom one is with capital "K" on the word "worK" wich is there just because it looks good. \
@@ -55,4 +65,4 @@ My research was done using the DOT framework and came to a valid conclusion. Bel
 = LO. 5 Personal leadership.
 My portfolio is made using typst. Typst is a powerful typesetting system that is designed for advanced typography, efficient document creatinon and is really fast. It's basically coding your documents with advantage that is more customisations. Reason is becasue I come from software background and in terms of designing documents I can present myself better with code. \
 #link("https://bxrisyvnev.github.io/portfolio/#projects?file=typst")
-#image("images/typstExample.png")
+#image("images/typstExample.png", height: 10cm)

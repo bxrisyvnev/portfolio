@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/**/
+
 body {
   font-family: "Poppins", sans-serif;
   color: #e0ffff;
@@ -228,7 +228,8 @@ section[data-page].active {
 #proj5:checked ~ .file-tree label[for="proj5"],
 #proj6:checked ~ .file-tree label[for="proj6"],
 #proj7:checked ~ .file-tree label[for="proj7"],
-#proj8:checked ~ .file-tree label[for="proj8"] {
+#proj8:checked ~ .file-tree label[for="proj8"],
+#proj9:checked ~ .file-tree label[for="proj9"] {
   background: rgba(0, 255, 255, 0.15);
   color: cyan;
   font-weight: 600;
@@ -271,7 +272,8 @@ section[data-page].active {
 #proj5:checked ~ .viewer #p5,
 #proj6:checked ~ .viewer #p6,
 #proj7:checked ~ .viewer #p7,
-#proj8:checked ~ .viewer #p8 {
+#proj8:checked ~ .viewer #p8,
+#proj9:checked ~ .viewer #p9 {
   display: block;
 }
 
