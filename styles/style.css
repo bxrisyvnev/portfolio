@@ -224,7 +224,10 @@ section[data-page].active {
 #proj1:checked ~ .file-tree label[for="proj1"],
 #proj2:checked ~ .file-tree label[for="proj2"],
 #proj3:checked ~ .file-tree label[for="proj3"],
-#proj4:checked ~ .file-tree label[for="proj4"] {
+#proj4:checked ~ .file-tree label[for="proj4"],
+#proj5:checked ~ .file-tree label[for="proj5"],
+#proj6:checked ~ .file-tree label[for="proj6"],
+#proj7:checked ~ .file-tree label[for="proj7"] {
   background: rgba(0, 255, 255, 0.15);
   color: cyan;
   font-weight: 600;
@@ -263,7 +266,10 @@ section[data-page].active {
 #proj1:checked ~ .viewer #p1,
 #proj2:checked ~ .viewer #p2,
 #proj3:checked ~ .viewer #p3,
-#proj4:checked ~ .viewer #p4 {
+#proj4:checked ~ .viewer #p4,
+#proj5:checked ~ .viewer #p5,
+#proj6:checked ~ .viewer #p6,
+#proj7:checked ~ .viewer #p7 {
   display: block;
 }
 
@@ -322,4 +328,10 @@ a {
   color: cyan;
   background-color: transparent;
   text-decoration: none;
+}
+
+iframe {
+  width: 100%;
+  height: 1000px;
+  border: none;
 }

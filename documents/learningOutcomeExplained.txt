@@ -1,0 +1,5 @@
+Lo1. - Making pretty things
+Lo2. - Keeping track of pretty things profesionally with versioning. Taking feedback from peers or stakeholders (teachers). Brang guides too.
+Lo3. - Keeping track of creation process. Explanation why stuff are done this way (DOT framework). Why newer version of the thing is better than the last.
+Lo4. - Taking and appling feedback from peers and stakeholders (document it) Research litreture goes here.
+Lo5. - Personal leadership
