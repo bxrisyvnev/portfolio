@@ -229,7 +229,8 @@ section[data-page].active {
 #proj6:checked ~ .file-tree label[for="proj6"],
 #proj7:checked ~ .file-tree label[for="proj7"],
 #proj8:checked ~ .file-tree label[for="proj8"],
-#proj9:checked ~ .file-tree label[for="proj9"] {
+#proj9:checked ~ .file-tree label[for="proj9"],
+#proj10:checked ~ .file-tree label[for="proj10"] {
   background: rgba(0, 255, 255, 0.15);
   color: cyan;
   font-weight: 600;
@@ -273,7 +274,8 @@ section[data-page].active {
 #proj6:checked ~ .viewer #p6,
 #proj7:checked ~ .viewer #p7,
 #proj8:checked ~ .viewer #p8,
-#proj9:checked ~ .viewer #p9 {
+#proj9:checked ~ .viewer #p9,
+#proj10:checked ~ .viewer #p10 {
   display: block;
 }
 

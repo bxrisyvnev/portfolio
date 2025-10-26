@@ -23,6 +23,7 @@ Inspiration search > Key concepts > Sketch it out > Apply basic design principle
 \
 The entire thing has to be a rough sketch that links: inspiration > concept > design.\
 And what I did is the following bellow.\
+#link("https://bxrisyvnev.github.io/portfolio/#projects?file=concepttosketch")
 #image("images/moodboard.png")
 #image("images/sketch.png", height: 15cm)
 The inspiration was the everyday life in the east-european countries. And the key words were "Everyday life" and I tried my best to sketch something that represented that. In life a person that is shown to smoke with their hands in the pokets is usually a person that is just taking a walk. No reason at all. Just walk to clear their head. It's something everyone does almost everyday and showing exactly those things (the cigarette and the hands in poket) helped the audience to guess my keywords. The moodboard showed everyday activy places like: gym, panel block, boxing gym, more panel blocks and a factory.
@@ -35,6 +36,11 @@ In our studio im in charge of the repository. I made a GitLab repository which b
 Because having a safe back up means that no files will ever be lost. \
 Because having good versioning means that locating files will be done easily. \
 Because clean and tidy storage space is important for every project. \
+\
+In one of my tasks I made a very basic twitch integrated game. In order to implement it to your stream you have to do a bunch of tasks. Because of that I made a simple text file with instructions on how to implement the game. \
+Here is repository for game.\
+#link("https://git.fhict.nl/I503706/twitch-game")
+#image("images/twitchGameManual.png")
 = LO. 3 Creative iterations.
 First thing we started working as a team is the name of our studio. We asked ChatGPT for names and we choose "Patchwork" because it reperesents us best as people of different backgrounds and skills. And also the word "Patch" can be aslo used for ICT related things. It was Hanna who wrote the promp to GPT. \
 The logo came from the name and because of that there are a lot of patches. \
@@ -48,6 +54,16 @@ Below the top right corner of the image has the logo that Hanna designed but it 
 The bottom right is there just becasue it looked a fitting based on visual judging. \
 #link("https://bxrisyvnev.github.io/portfolio/#projects?file=patchworklogofonts")
 #image("images/logoGoodFonts.png")
+\
+My portfolio is a website hosted on GitHub pages that uses mostly HTML and CSS and minimal JS. The whole design is done with CSS and the JS used is to make the page only a single page by switching elements (hiding uneeded flexboxes and unhiding the needed flexboxes). This is so the background animation is not disturbed becasue switching to a new page when pressing a button reloads the animation which doesn't look good. \
+This is only the first iteration of the portfolio and it was inspired by the bellow webpage:
+#link("https://eloybe-design.webflow.io/")
+In there the gradient is following the cursor and I really liked it but that used a lot of JS and makes the page heavy. I want a ultra light page with minimal JS. Because of it I made the background gradient move on it's own and also added transparent image to make it a little bit more eye catching and I belive it worked.\
+On the project tab I decided to use a file tree design because I want my portfolio to reflect my software personality and there is nothing more software than a file tree with the projects in it with .pdf to make it look legit. \
+Most of the design desidions are done following Wouter's feedback to take inspirations from other software developers' portfolios and that it should reflect me as a software developer. \
+#image("images/feedback.png")
+Bellow is a link to my portfolio hosted in GitHub Pages.\
+#link("https://bxrisyvnev.github.io/portfolio/#home")
 = LO. 4 Professional standards.
 For the group project I am the scrum master. We decided to use Scrum Agile because our client is not professional in any shape or form and introduces uncertainy (it took her 2 weeks to respond to out first email). Because of that we choose Agile becasue it's very good work framework for these unpredictable clients. The idea is to make a lot of stuff each sprint and display them to the client and deside from that what she likes and what she doesn't like and work from there. \
 I decided that Jira is to be choosen for planning tool as Jira is designed for Agile Scrum and also a lot of big companies use it so it's a great learning experience as it will come handy in the future. My team protested for a while because they are used to using Trello. But since we are not kids we now use Jira. \
@@ -66,3 +82,8 @@ My research was done using the DOT framework and came to a valid conclusion. Bel
 My portfolio is made using typst. Typst is a powerful typesetting system that is designed for advanced typography, efficient document creatinon and is really fast. It's basically coding your documents with advantage that is more customisations. Reason is becasue I come from software background and in terms of designing documents I can present myself better with code. \
 #link("https://bxrisyvnev.github.io/portfolio/#projects?file=typst")
 #image("images/typstExample.png", height: 10cm)
+\
+During the break I had the task to develop a simple twitch integrated game in order to properly research the technologies that will be used. Bellow is a clip of a test stream I did testing the game features. \
+#link("https://www.twitch.tv/bigdicrandy1221/clip/SmallGrossDeerBCouch-yDi6ghsu92qbyuDp")
+You can't see it but in the chat im typing !feed, !play and !heal and the tamagotchi responds by doing an action and it's stats increase. Bellow are link to portfolio and repository.
+#link("https://git.fhict.nl/I503706/twitch-game")
