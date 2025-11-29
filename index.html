@@ -41,6 +41,7 @@
       <section data-page="projects">
         <section id="projects">
           <div class="projects-wrap">
+            <!-- Hidden radios -->
             <input type="radio" name="proj" id="proj1" checked />
             <input type="radio" name="proj" id="proj2" />
             <input type="radio" name="proj" id="proj3" />
@@ -52,158 +53,158 @@
             <input type="radio" name="proj" id="proj9" />
             <input type="radio" name="proj" id="proj10" />
 
+            <!-- FILE TREE WITH LO GROUPS -->
             <aside class="file-tree">
               <div class="tree-title">/projects/..</div>
-              <label for="proj1" class="file">poster.pdf</label>
-              <label for="proj2" class="file"
-                >patchwork website wireframe.pdf</label
-              >
-              <label for="proj3" class="file"
-                >patchwork gitlab repository.pdf</label
-              >
-              <label for="proj4" class="file"
-                >patchwork logo whiteboard.pdg</label
-              >
-              <label for="proj5" class="file">patchwork logo fonts.pdf</label>
-              <label for="proj6" class="file">typst.pdf</label>
-              <label for="proj7" class="file">current audience dot research.pdf</label>
-              <label for="proj8" class="file">Jira.pdf</label>
-              <label for="proj9" class="file">Concept to Sketch.pdf</label>
-              <label for="proj10" class="file">Twitch game.pdf</label>
+
+              <!-- LO1 -->
+              <div class="lo-header">LO1</div>
+              <div class="lo-group">
+                <label for="proj1" class="file">poster.pdf</label>
+                <label for="proj2" class="file"
+                  >patchwork website wireframe.pdf</label
+                >
+              </div>
+
+              <!-- LO2 -->
+              <div class="lo-header">LO2</div>
+              <div class="lo-group">
+                <label for="proj3" class="file"
+                  >patchwork gitlab repository.pdf</label
+                >
+                <label for="proj4" class="file"
+                  >patchwork logo whiteboard.pdg</label
+                >
+              </div>
+
+              <!-- LO3 -->
+              <div class="lo-header">LO3</div>
+              <div class="lo-group">
+                <label for="proj5" class="file">patchwork logo fonts.pdf</label>
+                <label for="proj6" class="file">typst.pdf</label>
+              </div>
+
+              <!-- LO4 -->
+              <div class="lo-header">LO4</div>
+              <div class="lo-group">
+                <label for="proj7" class="file"
+                  >current audience dot research.pdf</label
+                >
+                <label for="proj8" class="file">Jira.pdf</label>
+              </div>
+
+              <!-- LO5 -->
+              <div class="lo-header">LO5</div>
+              <div class="lo-group">
+                <label for="proj9" class="file">Concept to Sketch.pdf</label>
+                <label for="proj10" class="file">Twitch game.pdf</label>
+              </div>
             </aside>
 
+            <!-- VIEWER -->
             <div class="viewer">
               <div id="p1" class="project-pane">
                 <h3>Poster</h3>
                 <p>Poster prototype for Patchwork brand. It is made in Gimp.</p>
                 <center>
-                  <img src="images/posterBoris.png" width="90%" height="90%" />
+                  <img src="images/posterBoris.png" width="90%" />
                 </center>
               </div>
 
               <div id="p2" class="project-pane">
                 <h3>Patchwork Website Wireframe</h3>
                 <p>
-                  Wireframe of a website for Patchwork. It is made using figma.
-		  There is a lot of prototyping done and learned. <br />
-		<a href="https://www.figma.com/design/HEged8XFPmD4OGwEx0RhZz/Patchwork-Website-design?node-id=37-30&p=f&t=XcbNy7azdgt12WhR-0">
-		Link to Figma
-		</a>
+                  Wireframe of a website for Patchwork. Made in Figma.<br />
+                  <a
+                    href="https://www.figma.com/design/HEged8XFPmD4OGwEx0RhZz/Patchwork-Website-design?node-id=37-30&p=f&t=XcbNy7azdgt12WhR-0"
+                    >Link to Figma</a
+                  >
                 </p>
                 <center>
-                  <img
-                    src="images/webpageDesign.png"
-                    width="90%"
-                    height="90%"
-                  />
+                  <img src="images/webpageDesign.png" width="90%" />
                 </center>
               </div>
 
               <div id="p3" class="project-pane">
                 <h3>Patchwork GitLab Repository</h3>
                 <p>
-                  GitLab repository for Patchwork. It's designed with 2 branch
-                  strategy, one main branch and one side branch. It has a rule
-                  that forbids anyone from pushing in the main branch. The main
-                  branch is only for merging at the end of each sprint. The
-                  pushing happens only in the side branch. This is done to
-                  ensure that there is one stable branch. <br />
+                  GitLab repository for Patchwork with a strict branch
+                  strategy.<br />
                   <a href="https://git.fhict.nl/I503706/s3mc-patchwork"
                     >Link for repository</a
                   >
                 </p>
-                <img
-                  src="images/gitLabHomePage.png"
-                  width="100%"
-                  height="100%"
-                />
-                <br />
-                <br />
-                <img
-                  src="images/gitLabPrototypesFiles.png"
-                  width="100%"
-                  height="100%"
-                />
+                <img src="images/gitLabHomePage.png" width="100%" />
+                <br /><br />
+                <img src="images/gitLabPrototypesFiles.png" width="100%" />
               </div>
 
               <div id="p4" class="project-pane">
                 <h3>Patchwork Logo Whiteboard</h3>
-                <p>
-                  Version of the logo i designed on the whiteboard wita a
-                  marker. It was just a idea mainly focused on having the
-                  rectangle on the middle empty.
-                </p>
-                <img src="images/logoOnBoard.png" width="100%" height="100%" />
-                <br />
+                <p>Original idea sketched on whiteboard.</p>
+                <img src="images/logoOnBoard.png" width="100%" />
               </div>
 
               <div id="p5" class="project-pane">
                 <h3>Patchwork Fonts for Logo</h3>
-                <p>
-			On the top right corner of the image has the logo that Hanna designed but it had the issue that
-			the font wasn’t good enough. Our group’s tone is that we are professional but can still be fun. Since
-			the colors are already fun I designed the left two logos with more professional font (FreeSerif
-			Regular). The top one is with regular text typing and the bottom one is with capital “K” on the word
-			“worK” wich is there just because it looks good.
-			The bottom right is there just becasue it looked a fitting based on visual judging.
-                </p>
-                <img src="images/logoGoodFonts.png" width="100%" height="100%" />
-                <br />
-            </div>
+                <p>Font experimentation and refinements.</p>
+                <img src="images/logoGoodFonts.png" width="100%" />
+              </div>
 
-            <div id="p6" class="project-pane">
+              <div id="p6" class="project-pane">
                 <h3>Typst</h3>
                 <p>
-		Typst is a powerful typesetting system that is designed for
-		advanced typography, efficient document creatinon and is really fast. It’s basically coding your
-		documents with advantage that is more customisations. Reason is becasue I come from software
-		background and in terms of designing documents I can present myself better with code.
+                  Document created using Typst, a code-based typesetting tool.
                 </p>
-                <img src="images/typstExample.png" width="100%" height="100%" />
-                <br />
-            </div>
+                <img src="images/typstExample.png" width="100%" />
+              </div>
 
-	    <div id="p7" class="project-pane">
+              <div id="p7" class="project-pane">
                 <h3>Current Audience DOT Research</h3>
-		<p>
-			Research document for Deska's current audience done using the DOT research framework.
-		</p>
-		<iframe src="documents/res.pdf"></iframe>
-                <br />
-            </div>
+                <p>
+                  Research document for Deska’s audience using DOT framework.
+                </p>
+                <iframe src="documents/res.pdf"></iframe>
+              </div>
 
-	    <div id="p8" class="project-pane">
+              <div id="p8" class="project-pane">
                 <h3>Jira</h3>
-		<p>
-		Jira board for Patchwork. I'm the Scrum Master and I manage the Jira Board. <br />
-		<a href="https://patchwork-s3mc.atlassian.net/jira/software/projects/SCRUM/boards/1">
-		Link to Jira Board
-		</a>
-		</p>
-		<img src="images/jiraBoard1.png" width="100%" height="100%">
-		<img src="images/jiraBoard2.png" width="100%" height="100%">
-                <br />
-            </div>
+                <p>
+                  Jira board for Patchwork, managed as Scrum Master.<br />
+                  <a
+                    href="https://patchwork-s3mc.atlassian.net/jira/software/projects/SCRUM/boards/1"
+                    >Link to Jira Board</a
+                  >
+                </p>
+                <img src="images/jiraBoard1.png" width="100%" />
+                <img src="images/jiraBoard2.png" width="100%" />
+              </div>
 
-	    <div id="p9" class="project-pane">
+              <div id="p9" class="project-pane">
                 <h3>Concept to Sketch</h3>
-		<p>
-		Result of Concept & Inspiration workshop.
-		</p>
-		<img src="images/moodboard.png" width="100%" height="100%">
-		<img src="images/sketch.png" width="100%" height="100%">
-                <br />
-            </div>
+                <p>Results of Concept & Inspiration workshop.</p>
+                <img src="images/moodboard.png" width="100%" />
+                <img src="images/sketch.png" width="100%" />
+              </div>
 
-	    <div id="p10" class="project-pane">
-                <h3>Concept to Sketch</h3>
-		<p>
-		Twitch integrated game. Tamagotchi Lebron James. You have to care for it by typing !feed, !play, !heal.<br />
-		<a href="https://www.twitch.tv/bigdicrandy1221/clip/SmallGrossDeerBCouch-yDi6ghsu92qbyuDp?filter=clips&range=all&sort=time">Link to clip</a/> <br />
-		<a href="https://git.fhict.nl/I503706/twitch-game">Link to repository</a>
-		</p>
-		 <iframe src="https://clips.twitch.tv/embed?clip=SmallGrossDeerBCouch-yDi6ghsu92qbyuDp&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-                <br />
+              <div id="p10" class="project-pane">
+                <h3>Twitch Game</h3>
+                <p>
+                  Twitch-integrated Tamagotchi game.<br />
+                  <a
+                    href="https://www.twitch.tv/bigdicrandy1221/clip/SmallGrossDeerBCouch-yDi6ghsu92qbyuDp?filter=clips&range=all&sort=time"
+                    >Link to clip</a
+                  ><br />
+                  <a href="https://git.fhict.nl/I503706/twitch-game"
+                    >Link to repository</a
+                  >
+                </p>
+                <iframe
+                  src="https://clips.twitch.tv/embed?clip=SmallGrossDeerBCouch-yDi6ghsu92qbyuDp&parent=www.example.com"
+                  frameborder="0"
+                  allowfullscreen="true"
+                ></iframe>
+              </div>
             </div>
           </div>
         </section>
@@ -212,6 +213,7 @@
 
     <footer>&copy; 2025 Portfolio. All rights reserved. (Not really)</footer>
 
+    <!-- SCRIPT UNCHANGED -->
     <script>
       (function () {
         const routes = Array.from(
@@ -233,7 +235,6 @@
         radios.forEach((radio) => {
           const label = projectsWrap.querySelector(`label[for="${radio.id}"]`);
           if (!label) return;
-          // turn "📄 task-manager.md" into "task-manager"
           const text = label.textContent
             .replace(/📄|\.[^ ]+|\s+/g, "")
             .toLowerCase();
@@ -283,7 +284,6 @@
           }
         }
 
-        // --- Nav clicks (Home / Projects)
         links.forEach((a) => {
           a.addEventListener("click", (e) => {
             e.preventDefault();
@@ -298,7 +298,6 @@
           });
         });
 
-        // --- Project file clicks (update URL)
         radios.forEach((radio) => {
           radio.addEventListener("change", () => {
             const slug = currentProjectSlug();
@@ -306,7 +305,6 @@
           });
         });
 
-        // --- Hash handling
         function handleHash() {
           const { route, params } = parseHash();
           showRoute(route);
