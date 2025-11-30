@@ -237,7 +237,20 @@ section[data-page].active {
 #proj7:checked ~ .file-tree label[for="proj7"],
 #proj8:checked ~ .file-tree label[for="proj8"],
 #proj9:checked ~ .file-tree label[for="proj9"],
-#proj10:checked ~ .file-tree label[for="proj10"] {
+#proj10:checked ~ .file-tree label[for="proj10"],
+#proj11:checked ~ .file-tree label[for="proj11"],
+#proj12:checked ~ .file-tree label[for="proj12"],
+#proj13:checked ~ .file-tree label[for="proj13"],
+#proj14:checked ~ .file-tree label[for="proj14"],
+#proj15:checked ~ .file-tree label[for="proj15"],
+#proj16:checked ~ .file-tree label[for="proj16"],
+#proj17:checked ~ .file-tree label[for="proj17"],
+#proj18:checked ~ .file-tree label[for="proj18"],
+#proj19:checked ~ .file-tree label[for="proj19"],
+#proj20:checked ~ .file-tree label[for="proj20"],
+#proj21:checked ~ .file-tree label[for="proj21"],
+#proj22:checked ~ .file-tree label[for="proj22"],
+#proj23:checked ~ .file-tree label[for="proj23"] {
   background: rgba(0, 255, 255, 0.15);
   color: cyan;
   font-weight: 600;
@@ -282,7 +295,20 @@ section[data-page].active {
 #proj7:checked ~ .viewer #p7,
 #proj8:checked ~ .viewer #p8,
 #proj9:checked ~ .viewer #p9,
-#proj10:checked ~ .viewer #p10 {
+#proj10:checked ~ .viewer #p10,
+#proj11:checked ~ .viewer #p11,
+#proj12:checked ~ .viewer #p12,
+#proj13:checked ~ .viewer #p13,
+#proj14:checked ~ .viewer #p14,
+#proj15:checked ~ .viewer #p15,
+#proj16:checked ~ .viewer #p16,
+#proj17:checked ~ .viewer #p17,
+#proj18:checked ~ .viewer #p18,
+#proj19:checked ~ .viewer #p19,
+#proj20:checked ~ .viewer #p20,
+#proj21:checked ~ .viewer #p21,
+#proj22:checked ~ .viewer #p22,
+#proj23:checked ~ .viewer #p23 {
   display: block;
 }
 
