@@ -1,0 +1,25 @@
+stages:
+  - mirror
+
+mirror_to_github:
+  stage: mirror
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache git openssh-client
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+    - chmod 600 ~/.ssh/id_ed25519
+    - ssh-keyscan github.com >> ~/.ssh/known_hosts
+    - git config --global user.email "ci@gitlab.com"
+    - git config --global user.name "GitLab CI"
+  script:
+    - git remote add github "$GITHUB_SSH_REPO"
+    - git fetch origin --prune --unshallow || git fetch origin --prune
+    - git fetch origin --tags
+    # Create/update local main from GitLab main
+    - git checkout -B main origin/main
+    # Force-push branches and tags to GitHub
+    - git push github main --force
+    - git push github --tags --force
+  only:
+    - main
