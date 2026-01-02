@@ -163,6 +163,173 @@ section[data-page].active {
   opacity: 0.9;
 }
 
+/* =========================
+   PROJECTS TAB (REDESIGNED)
+   ========================= */
+
+#projects-overview {
+  text-align: left;
+  padding-top: 8rem; /* matches your global section spacing but keeps internal layout nice */
+}
+
+.projects-hero {
+  max-width: 980px;
+  margin: 0 auto 2.2rem auto;
+  text-align: left;
+}
+
+.projects-hero h2 {
+  font-size: 3.2rem;
+  color: cyan;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.5px;
+}
+
+.projects-subtitle {
+  opacity: 0.85;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 760px;
+}
+
+.projects-grid {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.4rem;
+}
+
+.project-card {
+  grid-column: span 12;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 1.4rem 1.4rem 1.2rem 1.4rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 0 1px rgba(0, 255, 255, 0.06) inset;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.project-card-top {
+  margin-bottom: 1rem;
+}
+
+.project-badge {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+  color: cyan;
+  border: 1px solid rgba(0, 255, 255, 0.28);
+  background: rgba(0, 255, 255, 0.06);
+  margin-bottom: 0.7rem;
+}
+
+.project-card h3 {
+  font-size: 1.35rem;
+  color: cyan;
+  margin-bottom: 0.55rem;
+}
+
+.project-desc {
+  opacity: 0.88;
+  line-height: 1.55;
+  font-size: 1rem;
+  max-width: 880px;
+}
+
+.project-points {
+  margin: 0.9rem 0 1.1rem 1.1rem;
+  opacity: 0.9;
+}
+
+.project-points li {
+  margin: 0.35rem 0;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.meta-pill {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.18);
+  background: rgba(0, 255, 255, 0.05);
+  color: #e0ffff;
+}
+
+.project-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  font-weight: 600;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  color: #001011;
+  background: cyan;
+  border: 1px solid rgba(0, 255, 255, 0.6);
+}
+
+.btn-primary:hover {
+  background: rgba(0, 255, 255, 0.9);
+}
+
+.btn-ghost {
+  color: cyan;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(0, 255, 255, 0.25);
+}
+
+.btn-ghost:hover {
+  background: rgba(0, 255, 255, 0.08);
+  border-color: rgba(0, 255, 255, 0.35);
+}
+
+@media (min-width: 900px) {
+  .project-card {
+    grid-column: span 6;
+  }
+}
+
+/* =========================
+   LOs TAB (YOUR ORIGINAL UI)
+   ========================= */
+
 /* PROJECTS */
 #projects h2 {
   font-size: 4rem;
@@ -338,6 +505,17 @@ footer {
   }
   .file-tree {
     width: 100%;
+  }
+
+  /* Make projects overview feel good on small screens */
+  #projects-overview {
+    text-align: left;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    grid-column: span 12;
   }
 }
 

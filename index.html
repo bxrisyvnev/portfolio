@@ -14,10 +14,12 @@
       <nav>
         <a href="#home" data-route="home" class="active">Home</a>
         <a href="#projects" data-route="projects">Projects</a>
+        <a href="#los" data-route="los">LOs</a>
       </nav>
     </header>
 
     <main id="app">
+      <!-- HOME -->
       <section data-page="home" class="active">
         <section id="hero">
           <h2>Hi, I'm <span class="accent">Boris</span></h2>
@@ -38,7 +40,118 @@
         </section>
       </section>
 
+      <!-- PROJECTS (REDESIGNED OVERVIEW PAGE) -->
       <section data-page="projects">
+        <section id="projects-overview">
+          <div class="projects-hero">
+            <h2>Projects</h2>
+            <p class="projects-subtitle">
+              A clean overview of the main things I’m building this semester.
+              (Mock text for testing layout & styling.)
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <!-- DESKA GAME -->
+            <article class="project-card">
+              <div class="project-card-top">
+                <div class="project-badge">Main Build</div>
+                <h3>Deska Game</h3>
+                <p class="project-desc">
+                  Twitch-integrated tamagotchi-style experience with overlay +
+                  GUI + server communication. Built for fast iteration and live
+                  testing.
+                </p>
+              </div>
+
+              <ul class="project-points">
+                <li>Overlay + GUI talk via server</li>
+                <li>Commands trigger actions & animations</li>
+                <li>Designed for OBS stream usage</li>
+              </ul>
+
+              <div class="project-meta">
+                <span class="meta-pill">Node</span>
+                <span class="meta-pill">OBS Overlay</span>
+                <span class="meta-pill">Twitch Commands</span>
+              </div>
+
+              <div class="project-actions">
+                <a class="btn btn-primary" href="#los?file=tamagotchigame"
+                  >View evidence in LOs</a
+                >
+                <a class="btn btn-ghost" href="#los">Open LOs tab</a>
+              </div>
+            </article>
+
+            <!-- PATCHWORK STUDIO -->
+            <article class="project-card">
+              <div class="project-card-top">
+                <div class="project-badge">Team</div>
+                <h3>Patchwork Studio</h3>
+                <p class="project-desc">
+                  Team project setup focusing on workflow, prototypes, repo
+                  strategy, and planning structure. Built for stable delivery
+                  under uncertainty.
+                </p>
+              </div>
+
+              <ul class="project-points">
+                <li>Strict branching strategy for stability</li>
+                <li>Prototype iterations & merge decisions</li>
+                <li>Scrum process using Jira + meetings</li>
+              </ul>
+
+              <div class="project-meta">
+                <span class="meta-pill">GitLab</span>
+                <span class="meta-pill">Scrum</span>
+                <span class="meta-pill">Figma</span>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  class="btn btn-primary"
+                  href="#los?file=patchworkgitlabrepository"
+                  >View evidence in LOs</a
+                >
+                <a class="btn btn-ghost" href="#los">Open LOs tab</a>
+              </div>
+            </article>
+
+            <!-- CHESSPLATFORM -->
+            <article class="project-card">
+              <div class="project-card-top">
+                <div class="project-badge">Side Build</div>
+                <h3>Chessplatform</h3>
+                <p class="project-desc">
+                  Mock project entry for testing layout: a future platform idea
+                  where I can combine UI, infra, and clean architecture.
+                </p>
+              </div>
+
+              <ul class="project-points">
+                <li>Mock scope for UI + backend</li>
+                <li>Focus on clean system design</li>
+                <li>Will include matchmaking & profiles</li>
+              </ul>
+
+              <div class="project-meta">
+                <span class="meta-pill">Design</span>
+                <span class="meta-pill">Architecture</span>
+                <span class="meta-pill">Infra</span>
+              </div>
+
+              <div class="project-actions">
+                <a class="btn btn-primary" href="#los">View LOs</a>
+                <a class="btn btn-ghost" href="#home">Back to Home</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <!-- LOs (YOUR ORIGINAL PROJECTS PAGE MOVED HERE) -->
+      <section data-page="los">
         <section id="projects">
           <div class="projects-wrap">
             <!-- Hidden radios -->
@@ -557,7 +670,7 @@
 
     <footer>&copy; 2025 Portfolio. All rights reserved. (Not really)</footer>
 
-    <!-- SCRIPT UNCHANGED -->
+    <!-- SCRIPT (UPDATED ONLY TO SUPPORT: Home / Projects / LOs) -->
     <script>
       (function () {
         const routes = Array.from(
@@ -567,17 +680,20 @@
           document.querySelectorAll("nav a[data-route]"),
         );
 
-        const projectsWrap = document.querySelector(".projects-wrap");
-        const radios = projectsWrap
+        // IMPORTANT: the "projects-wrap" now lives under the LOs tab
+        const losWrap = document.querySelector(
+          'section[data-page="los"] .projects-wrap',
+        );
+        const radios = losWrap
           ? Array.from(
-              projectsWrap.querySelectorAll('input[type="radio"][name="proj"]'),
+              losWrap.querySelectorAll('input[type="radio"][name="proj"]'),
             )
           : [];
 
-        // --- Create slug map dynamically from label text ---
+        // --- Create slug map dynamically from label text (unchanged logic) ---
         const slugMap = {};
         radios.forEach((radio) => {
-          const label = projectsWrap.querySelector(`label[for="${radio.id}"]`);
+          const label = losWrap.querySelector(`label[for="${radio.id}"]`);
           if (!label) return;
           const text = label.textContent
             .replace(/📄|\.[^ ]+|\s+/g, "")
@@ -632,27 +748,36 @@
           a.addEventListener("click", (e) => {
             e.preventDefault();
             const route = a.dataset.route;
-            if (route === "projects") {
+
+            if (route === "los") {
               const slug = currentProjectSlug();
-              setHash("projects", slug ? { file: slug } : {});
+              setHash("los", slug ? { file: slug } : {});
+            } else if (route === "projects") {
+              setHash("projects");
             } else {
               setHash("home");
             }
+
             handleHash();
           });
         });
 
         radios.forEach((radio) => {
           radio.addEventListener("change", () => {
+            const { route } = parseHash();
+            if (route !== "los") return; // only reflect file selection in LOs tab
             const slug = currentProjectSlug();
-            if (slug) setHash("projects", { file: slug });
+            if (slug) setHash("los", { file: slug });
           });
         });
 
         function handleHash() {
           const { route, params } = parseHash();
           showRoute(route);
-          if (route === "projects") selectProjectFromParams(params);
+
+          if (route === "los") {
+            selectProjectFromParams(params);
+          }
         }
 
         window.addEventListener("hashchange", handleHash);
