@@ -4,6 +4,8 @@
 ]
 
 \
+= Abststract
+\
 
 = Learning outcome 1 - Conceptualize, design, and develop interactive media products
 Self assessment: Proficient \
