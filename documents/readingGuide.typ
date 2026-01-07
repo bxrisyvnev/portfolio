@@ -28,7 +28,7 @@ Cal. Twitch Overlay /* Show the game I coded and validate it with Teacher feedba
 \
 Porfolio Website /* Use the page itself as evidance and ask teachers for feeback and include it as validation. */
 \
-Chessplatform Re-design /*Design Chessplatform nicely and ask for feedback from chess players. (Toryan). Make an interview and record the transcript. Also deploy the page somewhere. */
+Chessplatform Redesign /*Design Chessplatform nicely and ask for feedback from chess players. (Toryan). Make an interview and record the transcript. Also deploy the page somewhere. */
 
 = Learning outcome 2 - Transferable Production
 Self assessment: Proficient \
@@ -67,7 +67,7 @@ Webpage wireframe /* First explain that you didnt know what to do. The explain y
 \
 Logo Fonts /* Explain the tought process for you to choose the fonts. Show them one by one and explain what teamates said (it needs to be fun and profecional) because of it you chose to change the letter to bigger to be fun. explain why some of them failed and show teacher feedback (Woulter and Paul) Woulter said its breaking rule and he likes it and Paul said it breaks rule and doesnt like it. */
 \
-Overlay gui overlay /* show figma where you worked on overlay gui and explain your desidions and bullshit some feedback you got */
+Overlay gui /* show figma where you worked on overlay gui and explain your desidions and bullshit some feedback you got */
 \
 Chessplatform front-end /* Use figma and get constant feedback from teachers and costudents and chessplayers like troyan for design improvements. Try and explain them well */
 

@@ -15,6 +15,12 @@ body {
   position: relative;
 }
 
+p {
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: left;
+}
+
 /* BACKGROUND  */
 .background {
   position: fixed;
@@ -173,7 +179,7 @@ section[data-page].active {
 }
 
 .projects-hero {
-  max-width: 980px;
+  max-width: 1280px;
   margin: 0 auto 2.2rem auto;
   text-align: left;
 }
@@ -193,11 +199,11 @@ section[data-page].active {
 }
 
 .projects-grid {
-  max-width: 980px;
+  max-width: 1280px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1.4rem;
+  gap: 1.8rem;
 }
 
 .project-card {
@@ -338,11 +344,37 @@ section[data-page].active {
 
 /* SHIFT PROJECT VIEWER LEFT */
 .projects-wrap {
-  display: flex;
-  justify-content: center; /* centers viewer + tree together */
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1200px) 260px;
+  column-gap: 3rem;
   align-items: flex-start;
-  gap: 3rem; /* more spacing between tree and viewer */
-  padding-left: 0; /* remove forced left shift */
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* File tree on the left */
+.file-tree {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.viewer {
+  grid-column: 2;
+  width: 100%;
+  max-width: none;
+}
+
+/* LOs page: remove the global 10% side padding so centering is true to viewport */
+section[data-page="los"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* The nested #projects section also inherits global section padding — override it too */
+section[data-page="los"] #projects {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* FILE TREE */
@@ -417,7 +449,15 @@ section[data-page].active {
 #proj20:checked ~ .file-tree label[for="proj20"],
 #proj21:checked ~ .file-tree label[for="proj21"],
 #proj22:checked ~ .file-tree label[for="proj22"],
-#proj23:checked ~ .file-tree label[for="proj23"] {
+#proj23:checked ~ .file-tree label[for="proj23"],
+#proj24:checked ~ .file-tree label[for="proj24"],
+#proj25:checked ~ .file-tree label[for="proj25"],
+#proj26:checked ~ .file-tree label[for="proj26"],
+#proj27:checked ~ .file-tree label[for="proj27"],
+#proj28:checked ~ .file-tree label[for="proj28"],
+#proj29:checked ~ .file-tree label[for="proj29"],
+#proj30:checked ~ .file-tree label[for="proj30"],
+#proj31:checked ~ .file-tree label[for="proj31"] {
   background: rgba(0, 255, 255, 0.15);
   color: cyan;
   font-weight: 600;
@@ -458,7 +498,7 @@ section[data-page].active {
   text-shadow: 0 0 14px rgba(0, 255, 255, 0.28);
 }
 
-/* sticky highlight (stays after flash) */
+/* EDITED: sticky highlight (stays after flash) */
 .file.sticky-highlight {
   background: rgba(0, 255, 255, 0.18);
   color: cyan;
@@ -517,7 +557,9 @@ section[data-page].active {
 #proj20:checked ~ .viewer #p20,
 #proj21:checked ~ .viewer #p21,
 #proj22:checked ~ .viewer #p22,
-#proj23:checked ~ .viewer #p23 {
+#proj23:checked ~ .viewer #p23,
+#proj22:checked ~ .viewer #p24,
+#proj22:checked ~ .viewer #p25 {
   display: block;
 }
 
@@ -541,23 +583,25 @@ footer {
   border-top: 1px solid rgba(0, 255, 255, 0.2);
 }
 
-@media (max-width: 900px) {
-  .projects-wrap {
-    flex-direction: column;
-  }
-  .file-tree {
-    width: 100%;
+@media (min-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(16, 1fr);
+    gap: 2.4rem;
   }
 
-  /* Make projects overview feel good on small screens */
-  #projects-overview {
-    text-align: left;
+  /* Top left – wider */
+  .projects-grid .project-card:nth-child(1) {
+    grid-column: 1 / span 8;
   }
-  .projects-grid {
-    grid-template-columns: 1fr;
+
+  /* Top right – wider */
+  .projects-grid .project-card:nth-child(2) {
+    grid-column: 9 / span 8;
   }
-  .project-card {
-    grid-column: span 12;
+
+  /* Bottom – very wide & centered */
+  .projects-grid .project-card:nth-child(3) {
+    grid-column: 3 / span 12;
   }
 }
 
