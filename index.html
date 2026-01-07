@@ -44,13 +44,6 @@
       <section data-page="projects">
         <section id="projects-overview">
           <div class="projects-hero">
-            <h2>Projects</h2>
-            <p class="projects-subtitle">
-              A clean overview of the main things I’m building this semester.
-              (Mock text for testing layout & styling.)
-            </p>
-          </div>
-
           <div class="projects-grid">
             <!-- DESKA GAME -->
             <article class="project-card">
@@ -80,7 +73,6 @@
                 <a class="btn btn-primary" href="#los?file=tamagotchigame"
                   >View evidence in LOs</a
                 >
-                <a class="btn btn-ghost" href="#los">Open LOs tab</a>
               </div>
             </article>
 
@@ -114,7 +106,6 @@
                   href="#los?file=patchworkgitlabrepository"
                   >View evidence in LOs</a
                 >
-                <a class="btn btn-ghost" href="#los">Open LOs tab</a>
               </div>
             </article>
 
@@ -124,26 +115,25 @@
                 <div class="project-badge">Side Build</div>
                 <h3>Chessplatform</h3>
                 <p class="project-desc">
-                  Mock project entry for testing layout: a future platform idea
-                  where I can combine UI, infra, and clean architecture.
+			My bread and butter. This project got me outstanding in s3 software. 
+			This semester I want to deploy it and redesign it.
                 </p>
               </div>
 
               <ul class="project-points">
-                <li>Mock scope for UI + backend</li>
-                <li>Focus on clean system design</li>
-                <li>Will include matchmaking & profiles</li>
+                <li>Automated Build, Test and Deploy</li>
+                <li>Advanced Security Measures</li>
+                <li>Brand new Design</li>
               </ul>
 
               <div class="project-meta">
                 <span class="meta-pill">Design</span>
-                <span class="meta-pill">Architecture</span>
-                <span class="meta-pill">Infra</span>
+                <span class="meta-pill">Security</span>
+                <span class="meta-pill">Infrastructure</span>
               </div>
 
               <div class="project-actions">
-                <a class="btn btn-primary" href="#los">View LOs</a>
-                <a class="btn btn-ghost" href="#home">Back to Home</a>
+                <a class="btn btn-primary" href="#los?file=tutoring">View LOs</a>
               </div>
             </article>
           </div>
@@ -673,6 +663,15 @@
     <!-- SCRIPT (UPDATED ONLY TO SUPPORT: Home / Projects / LOs) -->
     <script>
       (function () {
+        // EASY TO EDIT LIST PER PROJECT (edit only this map)
+        // Keys must match the "file=" slug you use in the Projects links (and your slugMap keys).
+        // Values are the LO radio ids to highlight (proj1..proj23).
+        const PROJECT_LO_HIGHLIGHTS = {
+          tamagotchigame: ["proj12", "proj13", "proj20"],
+          patchworkgitlabrepository: ["proj9", "proj8", "proj19"],
+          tutoring: ["proj21", "proj22", "proj23"],
+        };
+
         const routes = Array.from(
           document.querySelectorAll("section[data-page]"),
         );
@@ -726,6 +725,88 @@
           if (radio) radio.checked = true;
         }
 
+        // Supports:
+        // - hl=proj1,proj2,... (manual override)
+        // - otherwise uses PROJECT_LO_HIGHLIGHTS[file]
+        function highlightMultipleLosItems(params) {
+          if (!losWrap) return;
+
+          const slug = params.get("file");
+          const list = params.get("hl");
+
+          const ids = list
+            ? list
+                .split(",")
+                .map((s) => s.trim())
+                .filter(Boolean)
+            : slug
+              ? PROJECT_LO_HIGHLIGHTS[slug]
+              : null;
+
+          if (!ids || !Array.isArray(ids) || ids.length === 0) return;
+
+          // Clear previous sticky/flashes so each project click sets its own highlights
+          losWrap
+            .querySelectorAll(
+              ".flash-target, .flash-group, .flash-header, .sticky-highlight",
+            )
+            .forEach((el) => {
+              el.classList.remove(
+                "flash-target",
+                "flash-group",
+                "flash-header",
+                "sticky-highlight",
+              );
+            });
+
+          ids.forEach((id) => {
+            const label = losWrap.querySelector(`label[for="${id}"]`);
+            if (!label) return;
+
+            // stays highlighted
+            label.classList.add("sticky-highlight");
+
+            // flashes (temporary class removed later)
+            label.classList.add("flash-target");
+
+            const group = label.closest(".lo-group");
+            if (group) group.classList.add("flash-group");
+
+            const header = group ? group.previousElementSibling : null;
+            if (header && header.classList.contains("lo-header")) {
+              header.classList.add("flash-header");
+            }
+          });
+
+          // Remove flash class after animation, but keep sticky highlight
+          setTimeout(() => {
+            losWrap.querySelectorAll(".flash-target").forEach((el) => {
+              el.classList.remove("flash-target");
+            });
+          }, 1800);
+
+          // Remove flash group/header after animation (sticky is on labels only)
+          setTimeout(() => {
+            losWrap.querySelectorAll(".flash-group").forEach((el) => {
+              el.classList.remove("flash-group");
+            });
+            losWrap.querySelectorAll(".flash-header").forEach((el) => {
+              el.classList.remove("flash-header");
+            });
+          }, 2200);
+
+          // If hl was used, strip it to prevent re-flash on later hashchanges
+          if (list) {
+            setTimeout(() => {
+              if (slug) {
+                setHash("los", { file: slug });
+              } else {
+                setHash("los");
+              }
+            }, 60);
+          }
+        }
+
         function currentProjectSlug() {
           const checked = radios.find((r) => r.checked);
           if (!checked) return null;
@@ -777,6 +858,7 @@
 
           if (route === "los") {
             selectProjectFromParams(params);
+            highlightMultipleLosItems(params);
           }
         }
 
@@ -786,3 +868,4 @@
     </script>
   </body>
 </html>
+
