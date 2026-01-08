@@ -457,7 +457,12 @@ section[data-page="los"] #projects {
 #proj28:checked ~ .file-tree label[for="proj28"],
 #proj29:checked ~ .file-tree label[for="proj29"],
 #proj30:checked ~ .file-tree label[for="proj30"],
-#proj31:checked ~ .file-tree label[for="proj31"] {
+#proj31:checked ~ .file-tree label[for="proj31"],
+#proj32:checked ~ .file-tree label[for="proj32"],
+#proj33:checked ~ .file-tree label[for="proj33"],
+#proj34:checked ~ .file-tree label[for="proj34"],
+#proj35:checked ~ .file-tree label[for="proj35"],
+#proj36:checked ~ .file-tree label[for="proj36"] {
   background: rgba(0, 255, 255, 0.15);
   color: cyan;
   font-weight: 600;
@@ -558,8 +563,19 @@ section[data-page="los"] #projects {
 #proj21:checked ~ .viewer #p21,
 #proj22:checked ~ .viewer #p22,
 #proj23:checked ~ .viewer #p23,
-#proj22:checked ~ .viewer #p24,
-#proj22:checked ~ .viewer #p25 {
+#proj24:checked ~ .viewer #p24,
+#proj25:checked ~ .viewer #p25,
+#proj26:checked ~ .viewer #p26,
+#proj27:checked ~ .viewer #p27,
+#proj28:checked ~ .viewer #p28,
+#proj29:checked ~ .viewer #p29,
+#proj30:checked ~ .viewer #p30,
+#proj31:checked ~ .viewer #p31,
+#proj32:checked ~ .viewer #p32,
+#proj33:checked ~ .viewer #p33,
+#proj34:checked ~ .viewer #p34,
+#proj35:checked ~ .viewer #p35,
+#proj36:checked ~ .viewer #p36 {
   display: block;
 }
 

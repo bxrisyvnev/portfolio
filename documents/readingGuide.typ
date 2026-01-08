@@ -111,9 +111,13 @@ Advanced git skills /*explain that you are way better than you teamates on git a
 \
 Feedpulse /* show feedpulse with teachers and explain what your reaction was and why you took it and why it helped you and what you did after that */
 \
+=== Events
+\
 Career day /* explain that you went ther to get a better ideas of the companies. Show toy you got from there as proof */
 \
 Expo day /* explain what you did at the exposition of your project and show the paper you wrote on ther for the other groups you reviwed */
+\
+=== Individual Work
 \
 Figma /* Explain why you mainly used figma (desire to learn it because you can export code from it */
 \
