@@ -197,7 +197,7 @@
                 <label for="proj5" class="file">Calsifer Twitch Overlay</label>
                 <label for="proj6" class="file">Portfolio Website</label>
                 <label for="proj7" class="file">Chessplatform Redesign</label>
-                <label for="proj8" class="file">Self Reflection</label>
+                <label for="proj8" class="file">Self Reflection LO1</label>
               </div>
 
               <!-- LO2 -->
@@ -215,7 +215,7 @@
                 <label for="proj16" class="file">Webpage Figma</label>
                 <label for="proj17" class="file">GUI Overlay Figma</label>
                 <label for="proj18" class="file">Discord</label>
-                <label for="proj19" class="file">Self Reflection</label>
+                <label for="proj19" class="file">Self Reflection LO2</label>
               </div>
 
               <!-- LO3 -->
@@ -225,7 +225,7 @@
                 <label for="proj21" class="file">Logo Fonts</label>
                 <label for="proj22" class="file">Game GUI</label>
                 <label for="proj23" class="file">Chessplatform Figma</label>
-                <label for="proj24" class="file">Self Reflection</label>
+                <label for="proj24" class="file">Self Reflection LO3</label>
               </div>
 
               <!-- LO4 -->
@@ -244,7 +244,7 @@
                 >
                 <label for="proj30" class="file">Jira Board</label>
                 <label for="proj31" class="file">Stand up Meetings</label>
-                <label for="proj32" class="file">Self Reflection</label>
+                <label for="proj32" class="file">Self Reflection LO4</label>
               </div>
 
               <!-- LO5 -->
@@ -254,7 +254,7 @@
                 <label for="proj34" class="file">Strenght</label>
                 <label for="proj35" class="file">Events</label>
                 <label for="proj36" class="file">Individual Work</label>
-                <label for="proj37" class="file">Self Reflection</label>
+                <label for="proj37" class="file">Self Reflection LO5</label>
               </div>
             </aside>
 
@@ -398,61 +398,150 @@
                   We split up into two teams: the artists and the coders. Later
                   bacame the artists, the figma maniacs and the coder.
                   <br /><br />
-                  The structure of the code is the following: <br />
-                </p>
-              </div>
-
-              <div id="p9" class="project-pane">
-                <h3>Patchwork GitLab Repository</h3>
-                <p>
-                  GitLab repository for Patchwork with a strict branch strategy.
-                  It's that no one can push any code in the main branch. This is
-                  done so there is always one stable version of the project and
-                  one unstable version where all development happens.
+                  The architechture is the following: <br /><br />
+                  <img src="images/architecture.png" width="100%" />
                   <br /><br />
-                  Different features are developed in different branches that
-                  merge into the side (unstable) branch and after validating
-                  that everything works and is stable enough is merged to the
-                  main (stable) branch. <br /><br />
-                  This way there will always be a backup in case someone messes
-                  the repo by mistake.
+                  Both the gui and overlay are hosted on a server running on
+                  localhost 3000. In order to start that server Desca will have
+                  to open a terminal inside the folder and type "npm install" to
+                  install all the dependancies once and then each time she wants
+                  to start the game she will have to open a terminal inside the
+                  server folder and type "node server". Then she will have to
+                  put the browser overlay inside obs with url
+                  "http://localhost:3000/overlay/index.html" and to access the
+                  gui she will have to go to
+                  "http://localhost:3000/gui/index.html" inside her own browser.
                   <br /><br />
-                  <a href="https://git.fhict.nl/I503706/s3mc-patchwork"
-                    >Link for repository</a
-                  >
-                  <img src="images/gitLabHomePage.png" width="100%" />
-                  <br /><br />
-                  <img src="images/gitLabPrototypesFiles.png" width="100%" />
+                  The server communicates to the gyi and overlay with a socket.
+                  The actuall commands comming from the chat are handled by
+                  streamer.bot where she can connect and modify how the viewer
+                  point redeems are handled. All of this is explained in the
+                  user guide. <br /><br />
+                  The code is split into front and back. The front is on html
+                  and css and the back is in JavaScript. <br /><br />
+                  Bellow is a pciture of the file structure and the files
+                  themselfves.
                 </p>
-              </div>
-
-              <div id="p13" class="project-pane">
-                <h3>Twitch Game Manual</h3>
+                <br />
+                <center><img src="images/files.png" width="40%" /></center>
                 <p>
-                  In one of my tasks I made a very basic twitch integrated game.
-                  In order to implement it to your stream you have to do a bunch
-                  of tasks. Because of that I made a simple text file with
-                  instructions on how to implement the game
-                </p>
-                <img src="images/twitchGameManual.png" width="100%" />
-              </div>
-
-              <div id="p14" class="project-pane">
-                <h3>Tamagotchi Game repository</h3>
-                <p>
-                  For the game I made gitlab repository where I added Dylan and
-                  Constantin to work on the game. <br /><br />
-                  It uses the same branching strategy as the Patchwork
-                  repository. <br /><br />
+                  <br />
+                  Bellow is a link to the gitlab repository.<br />
                   <a href="https://git.fhict.nl/I503706/deska-game"
-                    >Link for repository</a
+                    >Link to GitLab</a
                   >
-                  I am the only one pushing in the repo at the time of the
-                  screenshot because the rest are still busy with merging the
-                  Control Panel GUI prototypes. <br /><br />
+                  <br /><br />
+                  A more interesting design related thing I did is decresse the
+                  struggle of our artists by making it so they don't have to
+                  color each and every idle state to match the changed color by
+                  just rotating the hue of the gif in the code. It dynamically
+                  assigns a diferent color class to the gif and removes it when
+                  it's time is up. Bellow is the code responsible for that:
+                  <br /><br />
+                  <img src="images/colorChangeCSS.png" width="40%" />
+                  <img src="images/colorChangeJS.png" width="40%" />
+                  <br /><br />
+                  Here is a demo clip from twitch on how it works. I don't have
+                  an account that has viewer point shop and it is not possible
+                  to use Desca's account because her giving it to us might
+                  expose personal information. Because of that I'm skipping a
+                  step and directly parsing commands to the server. <br /><br />
+                  <video width="100%" controls>
+                    <source src="images/videoCal.mp4" type="video/mp4" />
+                  </video>
+                  <br /><br />
+                  There still are some bugs but I lack the time to fix them so
+                  this is what I have so far. I also am not displaying all the
+                  color changes and the cosmetics because that would take too
+                  much time.
+                  <br /><br />
+                  We had a meeting with Desca to demo her the game and she
+                  really liked it. She said it looks really interactive.
+                  Transcript for the meeting can be found in LO 4 section.
                 </p>
-                <img src="images/gitGame1.png" width="100%" />
-                <img src="images/gitGame2.png" width="100%" />
+              </div>
+
+              <div id="p6" class="project-pane">
+                <h3>Portfolio Website</h3>
+                <p>
+                  In order to show my development process in this semester I had
+                  to make this portfolio website. <br /><br />
+                  My first idea was to make a simple pdf file where I can show
+                  all my stuff and program it in typst so I can learn typst but
+                  after a talk with Wouter it got apperant that I might want to
+                  take inspiration from other software engeneers and make
+                  something thematic. Bellow is a picture of feedpuse prooving
+                  conversation with Wouter. <br /><br />
+                  <img src="images/feedpulsePortfolio.png" width="100%" />
+                  <br /><br />
+                  Because of that talk I looked around and decided to make a
+                  webpage and design it to look more digital, more like a
+                  software project with a file tree on the left and a viewer in
+                  the middle. I took inspiration from my own NeoVim
+                  customisation set up: <br /><br />
+                  <img src="images/nvimSetup.png" width="100%" />
+                  <br /><br />
+                  I wanted to make the page also reflect me as a person. I am a
+                  software engeneer so the digital vibe is unevitable. I also am
+                  a big fan of nature and more specifically clouds. I love
+                  looking at clouds. Becasue of that I desided to put an image
+                  of a cloudy sky as a background but also make it transparent
+                  and on top of a teal color giving it more of a digital vibe
+                  mixing both nature and coding. Also becasue I didn't want to
+                  make it look so static I decided to add a gradient wave going
+                  from side to side switching the colors from teal and black.
+                  <br /><br />
+                  <img src="images/backgroundCode.png" width="100%" />
+                  <br /><br />
+                  Later I added the Projects tab where If you click on "View
+                  evidence in LOs" it will send you in the LOs tab with the
+                  things that I did for that project hightlighted making it more
+                  interactive. <br /><br />
+                  I also added a bunch of more animations that you have probably
+                  saw already. <br /><br />
+                  Bellow is a link to the GitHub repository.<br />
+                  <a href="https://github.com/bxrisyvnev/portfolio"
+                    >Link to GitHub</a
+                  >
+                  <br /><br />
+                  Jan validated it by saing it looks interesting. Crish and Dirk
+                  said that I should make it a stronger point in proving my
+                  learning outcomes.
+                </p>
+              </div>
+
+              <div id="p7" class="project-pane">
+                <h3>Chessplatform Redesign</h3>
+                <p></p>
+              </div>
+
+              <div id="p8" class="project-pane">
+                <h3>Self Reflection</h3>
+                <h4>Self Assessment: Proficient</h4>
+                <p>
+                  <br />
+                  I would say proficient because I believe I learned a lot in
+                  this semester about conceptualizing, designing and developing
+                  an interactive media producst. I would say that I may lack in
+                  designing but I trived in making interactive media products.
+                  In fact I would say I made the most in the group for actually
+                  producing the interactive game since it's coded entirely by
+                  me, I found out how to connect Desca's viewer point chat to
+                  the game, I connected all the sprites given to me, I made the
+                  functions where the idle gifs stay a sertain color by rotating
+                  the hue. I basically coded all the functionalities with the
+                  limited amount of gifs and help given to me. The plan was
+                  after fully designing the gui Dylan and Constantin would help
+                  me but it took them an unreasonable amount of time to finish
+                  it so I was kinda left alone. <br /><br />
+                  My main point in this semester was to learn Figma because with
+                  Figma I can finish prototyping an idea way faster in figma
+                  that in code. In that matter I can say that now I'm confident
+                  that I can use Figma for conceptualizing and I will continue
+                  using it in the future project that require me to build a
+                  front end. I found out I can also export code from Figma which
+                  only motivated me more to learn it.
+                </p>
               </div>
 
               <div id="p15" class="project-pane">
@@ -481,7 +570,7 @@
                 <img src="images/github2.png" width="100%" />
               </div>
 
-              <div id="p6" class="project-pane">
+              <div id="p55" class="project-pane">
                 <h3>Patchwork Logo Whiteboard</h3>
                 <p>
                   I drew a concept logo on a whiteboard that was used as part of
@@ -490,7 +579,7 @@
                 <img src="images/logoOnBoard.png" width="100%" />
               </div>
 
-              <div id="p5" class="project-pane">
+              <div id="p55" class="project-pane">
                 <h3>Patchwork Fonts for Logo</h3>
                 <p>
                   Below the top right corner of the image has the logo that
@@ -556,7 +645,7 @@
                 </p>
               </div>
 
-              <div id="p7" class="project-pane">
+              <div id="p55" class="project-pane">
                 <h3>Current Audience DOT Research</h3>
                 <p>
                   While we were waiting for Deska we decided that the only thing
@@ -592,7 +681,7 @@
                 <iframe src="documents/res.pdf"></iframe>
               </div>
 
-              <div id="p8" class="project-pane">
+              <div id="p55" class="project-pane">
                 <h3>Jira</h3>
                 <p>
                   For the group project I am the scrum master. We decided to use
