@@ -463,7 +463,8 @@ section[data-page="los"] #projects {
 #proj34:checked ~ .file-tree label[for="proj34"],
 #proj35:checked ~ .file-tree label[for="proj35"],
 #proj36:checked ~ .file-tree label[for="proj36"],
-#proj37:checked ~ .file-tree label[for="proj37"] {
+#proj37:checked ~ .file-tree label[for="proj37"],
+#proj38:checked ~ .file-tree label[for="proj38"] {
   background: rgba(0, 255, 255, 0.15);
   color: cyan;
   font-weight: 600;
@@ -577,7 +578,8 @@ section[data-page="los"] #projects {
 #proj34:checked ~ .viewer #p34,
 #proj35:checked ~ .viewer #p35,
 #proj36:checked ~ .viewer #p36,
-#proj37:checked ~ .viewer #p37 {
+#proj37:checked ~ .viewer #p37,
+#proj38:checked ~ .viewer #p38 {
   display: block;
 }
 
