@@ -7,20 +7,26 @@
   Boris Yanev
 ]
 
+\
+\
 = Abststract
 \
 I'm Boris. I don't sleep, I code. \ \
 I'm coming from heavey software background. I'm so heavy in the software that I find it easier to program my pdf files in typst rather than using word. My friends think I’m insane for starting Linux with Arch which is like daily-driving a Tesla you have to engineer yourself, without mechanical training, while the parts are still ore in the ground. Almost everything I do is done in the bash terminal. I know a thing or two about stuff. \
 \
-This semester tho, I don't know a single thing about stuff. I'm honestly here for fun. \
+This semester tho, I don't know a single thing about stuff. My goal for the semester is to come out with a better idea of how the design prosses is done. From conceptualizing to creating it. For me it is more important to lean how it is done rather than being good at it because if I have a manual to follow while doing something over and over again at some point you become better at it. An example is going to the gym. If you go there doing random exercises it will be way harder to build muscle than having a strict plan. \
 \
 I'm part of Parchwork who's client is a streamer called Desca and our project is to make her a game for her viewers to play when the stream gets boring. \
 \
 This document is only a reading guide to my portfolio which is in the form of a website. The portfolio should be something that I have to make to show my progress in this semester. I've coded a lot of websites but I have never made pretty ones so my goal is to make a pretty page as my portfolio that can be shown as a result of my development. Bellow is a link to it.\
 #styled-link("https://bxrisyvnev.github.io/portfolio/#home")[https://bxrisyvnev.github.io/portfolio/#home]
-\
-\
+
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+
 #outline()
+
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+
 = Learning outcome 1 - Conceptualize, design, and develop interactive media products
 Self assessment: Proficient \
 \
@@ -28,17 +34,17 @@ Self assessment: Proficient \
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=logoshapesidea")[Logo Shapes Idea]
 /*add the white board logo and say team found it interesting in portfolio*/
 \
-#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=websitewireframe")[Website wireframe] /*add the website wireframe you made and say that the final product uses some of your ideas as validation. specify which ones in the portfolio */
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=websitewireframe")[Website wireframe]
 \
-#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=calsiferguiwireframe")[Cal. GUI wireframe] /*Show my figma wireframe and then show the final one and specifically show the part inspired by your design. Validate it with desca's feedback and show the transcript. */
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=calsiferguiwireframe")[Cal. GUI wireframe]
 \
 \
 === Design
-#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=poster")[Poster] /*add ugly poster and say team found it ugly but you did it to enter the media creation world. Explain more in portfolio*/
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=poster")[Poster]
 \
 \
 === Interactive Media Product
-#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=calsifertwitchoverlay")[Cal. Twitch Overlay] /* Show the game I coded and validate it with Teacher feedback from the exposition we had and desca's feedback from the meeting and show transcript.*/
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=calsifertwitchoverlay")[Cal. Twitch Overlay]
 \
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=portfoliowebsite")[Porfolio Website] /* Use the page itself as evidance and ask teachers for feeback and include it as validation. */
 \
@@ -88,11 +94,11 @@ Self assessment: Proficient \
 \
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=webpagewireframe")[Webpage wireframe] /* First explain that you didnt know what to do. The explain you talked with multiple people Walter and Paul and say Paul told you to take inspiration from other pages and Woulter told you to work with the designers. Show the improvements. Remake the figma so it shows the changes */
 \
-#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=logofonts")[Logo Fonts] /* Explain the tought process for you to choose the fonts. Show them one by one and explain what teamates said (it needs to be fun and profecional) because of it you chose to change the letter to bigger to be fun. explain why some of them failed and show teacher feedback (Woulter and Paul) Woulter said its breaking rule and he likes it and Paul said it breaks rule and doesnt like it. */
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=logofonts")[Logo Fonts] /* Explain the tought process for you to choose the fonts. Show them one by one and explain what teamates said (it needs to be fun and professional) because of it you chose to change the letter to bigger to be fun. explain why some of them failed and show teacher feedback (Woulter and Paul) Woulter said its breaking rule and he likes it and Paul said it breaks rule and doesnt like it. */
 \
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=gamegui")[Game gui] /* show figma where you worked on overlay gui and explain your desidions and bullshit some feedback you got */
 \
-#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=chessplatformfigma")[Chessplatform front-end] /* Use figma and get constant feedback from teachers and costudents and chessplayers like troyan for design improvements. Try and explain them well */
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=twitchoverlay")[Twitch Overlay] /* Use figma and get constant feedback from teachers and costudents and chessplayers like troyan for design improvements. Try and explain them well */
 \
 \
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=selfreflectionlo3")[Self Reflection]
@@ -109,6 +115,11 @@ Self assessment: Proficient \
 \
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=searchfatigueresearch")[Search Fatigue Research]
 \
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=chessplayersuserresearch")[Chess Player User Research]
+\
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=definingchessplayersproblems")[Defining Chess Players Problems]
+\
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=generatingideasforchessplatform")[Generating Ideas for Chessplatform]
 \
 === Stakeholders communication
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=meetingwithdesca")[Meeting with Desca] /* Show arrangement chats and transcripts and picture from Desca Meeting */
@@ -121,6 +132,7 @@ Self assessment: Proficient \
 === Scrum
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=jiraboard")[Jira board] /* show Jira board and explain why jira and why scrum. Say you are the scrum master too */
 \
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=finalpresentation")[Final Presentation]
 \
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=selfreflectionlo4")[Self Reflection]
 \
@@ -133,10 +145,12 @@ Self assessment: Proficient \
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=weakness")[Unable to finalize fidelity] /* explain why you are mediocar in that position and why you left Dylan finalise all figma and why you only did low-mid fidelity work */
 \
 \
-=== Strenght
-#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=strenght")[Advanced coding skills] /* explain that you are way better at coding than everyone and thats why you did almost all coding work and left teamates more time to shine in what they are good at */
+=== strength
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=strength")[Advanced coding skills] /* explain that you are way better at coding than everyone and thats why you did almost all coding work and left teamates more time to shine in what they are good at */
 \
-#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=strenght")[Advanced git skills] /*explain that you are way better than you teamates on git and thats why you manage all team repositories. Explain how you teached Dylan and Constantin to use git. Also teach them how to write commit messages (make a lecture) */
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=strength")[Advanced git skills] /*explain that you are way better than you teamates on git and thats why you manage all team repositories. Explain how you teached Dylan and Constantin to use git. Also teach them how to write commit messages (make a lecture) */
+\
+#styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=personalgoal")[Personal Goal]
 \
 === Events
 #styled-link("https://bxrisyvnev.github.io/portfolio/#los?file=events")[Career day] /* explain that you went ther to get a better ideas of the companies. Show toy you got from there as proof */
@@ -158,21 +172,22 @@ Self assessment: Proficient \
 \
 \
 \
+\
+Sorry Wouter for not implementing the feedback you gave me on the reading guide fully. I know you spend like 30 minutes and a lot of energy drawing that board with the whole explanation but I feel I already put a big bulk of text inside the portfolio and wanted to keep the reading guide as short as posible.
+\
+\
+\
+\
 = Self Reflection
 \
-Nightmare.
+Design has always been my biggest weakness and because im a madman I decided to jump with both feet into this semester just for fun.
 \
 \
-Design has always been my biggest weakness and because im a madman I desided to jump with both feet into this semester just for fun.
-\
-\
-I will never explain why I did this. For my 7th semester I could have chosen way cooler stuff like going to Korea or Japan for a minor degree or be lazy and go to Pulsed to eat chalk and make sport socks for people with dissabilities. Instead I desided to approach my weakness and suffer critisism from designers.
-\
-\
-The people I met really changed me. I spectated my teamates design cool stuff which I could never be able to do. But by just spectating I was able to improve a lot. My improvements have been reflected in the design of my personal projects like: My custom designed Arch Linux rice (you can google what that is) and redesigning one of my big projects.
+The people I met really changed me. I spectated my teamates design cool stuff which I could never be able to do. But by just spectating I was able to improve a lot. My improvements have been reflected in the portfolio and I feel like I can see an improvement curve between the ugly poster and the gui wireframe in Figma.
 \
 \
 The hardest part was for me to change my way of thinking. Before I would always leave an ugly front-end because I would say "I'm not media I dont care about it" but now things have reversed and I had to change fundamentally. Now I am able to spot trigger points in design more easily than before. For example me revisiting a project that got me outstanding in software and imidiatly making me mad on how bad it looks like really got me to think how much I have improved in that matter.
 \
 \
 Overall it has been a fun experience attending this semester. I don't care if I pass or not because I managed to develop parts of me which I considered helpless and that is what matters the most to me.
+
